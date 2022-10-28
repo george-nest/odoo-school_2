@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-var = {
+{
     'name': "hr_hospital",
 
     'summary': """
@@ -20,17 +20,25 @@ var = {
     # any module necessary for this one to work correctly
     'depends': ['base'],
 
-    'installable': True,
-    'auto_install': True,
+    'external_dependencies': {'python': [], },
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'views/menu.xml',
-        'views/patient.xml',
+        'views/hr_hospital_menu.xml',
+        'views/hr_hospital_patient_views.xml',
+        'views/hr_hospital_patient_profile_views.xml',
+        'views/hr_hospital_diagnose_views.xml',
+        'views/hr_hospital_doctor_views.xml',
     ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
+
+    'installable': True,
+    'auto_install': False,
+
+    'images': [
+        'static/description/icon.png',
     ],
+
+    'price': 0,
+    'currency': 'EUR',
 }
